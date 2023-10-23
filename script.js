@@ -68,7 +68,7 @@ const API_KEY ="e1f300729c8c78554378ae4ba21b0200" // API key for OpenweatherMap 
 const getCityCoordinates = () => {
     const cityName = cityInput.value.trim(); // Get user entered city name and remove extra spaces
     if(!cityName) return; //return city name
-    const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
+    const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
    
     // Get entered city coordinates (latitude, longitude, and name) from the API response
     
@@ -85,7 +85,7 @@ const getUserCoordinates = () => {
 navigator.geolocation.getCurrentPosition(
     position => {
         const {latitude, longitude} = position.coords;
-        const REVERSE_GEOCODING_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+        const REVERSE_GEOCODING_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
         
         
         
