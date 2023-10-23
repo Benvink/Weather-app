@@ -5,7 +5,7 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 
 const getWeatherDetails =(cityName, lat, lon) => {
-    const WEATHER_API_URL = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`
 
     const createWeatherCard = (cityName, weatherItem, index) => {
         if(index === 0){ // HTML for the main weather card
